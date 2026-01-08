@@ -62,7 +62,56 @@
   "about": {
     "title": "About China Cars Export",
     "subtitle": "Your Trusted Partner in Chinese Used Car Export",
-    "intro": "We are a leading exporter of high-quality Chinese used cars to the Middle East. With years of experience in the automotive export business, we understand the unique needs of Middle Eastern customers.",
+    "company": {
+      "title": "Company Introduction",
+      "intro": "We are a Chinese automotive enterprise with 20 years of development history, possessing rich export experience in both passenger and commercial vehicles. Our export portfolio covers complete vehicle export (including used car export), KD (Knock Down) kits, and customized modifications.",
+      "achievement": "To date, our vehicles have been sold to over 40 countries, serving more than 20,000 users. The company has a complete R&D system, advanced production processes, and strict quality control systems, enabling us to meet diverse requirements across different regions and scenarios."
+    },
+    "culture": {
+      "title": "Our Culture & Vision",
+      "vision": {
+        "title": "Corporate Vision",
+        "description": "Through modification and diversified product services, we provide high-quality automotive export solutions for global customers."
+      },
+      "values": {
+        "title": "Corporate Values",
+        "description": "Innovation and Change, Customer-oriented, Professional Excellence, Win-win Cooperation"
+      },
+      "mission": {
+        "title": "Corporate Mission",
+        "description": "To become a globally recognized leader in diversified automotive product exports, shaping industry standards through innovation and service."
+      }
+    },
+    "stats": {
+      "title": "Company Achievements",
+      "years": "Years of Experience",
+      "countries": "Countries Served",
+      "customers": "Users Served",
+      "warehouses": "Overseas Warehouses"
+    },
+    "warehouses": {
+      "title": "Global Warehouse Network",
+      "subtitle": "Strategically located warehouses across 13 countries to ensure fast delivery and local support",
+      "list": {
+        "russia": "Russia Warehouse",
+        "belarus": "Belarus Warehouse",
+        "kazakhstan": "Kazakhstan Warehouse",
+        "uzbekistan": "Uzbekistan Warehouse",
+        "moldova": "Moldova Warehouse",
+        "poland": "Poland Warehouse",
+        "thailand": "Thailand Warehouse",
+        "cambodia": "Cambodia Warehouse",
+        "gabon": "Gabon Warehouse",
+        "uae": "UAE Warehouse",
+        "iran": "Iran Warehouse",
+        "burkina": "Burkina Faso Warehouse",
+        "congo": "Congo (DRC) Warehouse"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "description": "We are committed to providing customers with comprehensive automotive export solutions through advanced technology, strict quality control, and excellent service, ensuring that every vehicle meets the highest standards."
+    },
     "why": {
       "title": "Why Choose Us",
       "quality": {
