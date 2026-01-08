@@ -8,8 +8,11 @@
   "home": {
     "hero": {
       "title": "Global B2B Chinese Automotive Export Solutions",
-      "subtitle": "Professional vehicle export services for wholesalers, dealers, and distributors worldwide. Complete supply chain from China to your market.",
-      "cta": "Explore Inventory"
+      "subtitle": "A professional vehicle export experience designed for your business",
+      "cta": "Search Inventory"
+    },
+    "search": {
+      "placeholder": "What kind of vehicles are you looking for?"
     },
     "b2b": {
       "title": "B2B Services",

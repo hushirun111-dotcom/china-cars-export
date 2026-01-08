@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFeaturedVehicles, brands } from '@/lib/data';
-import { ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import BrandIcon from '@/components/BrandIcon';
 
 export async function generateMetadata({ 
@@ -56,71 +56,49 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-        
-        {/* Speed lines effect */}
-        <div className="absolute inset-0 overflow-hidden opacity-30">
-          {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-0.5 bg-white animate-speedLines"
-              style={{
-                top: `${20 + i * 15}%`,
-                width: '200px',
-                animationDelay: `${i * 0.3}s`,
-              }}
-            />
-          ))}
-        </div>
-        
-        {/* Tire track pattern */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="tireTrack" x="0" y="0" width="100" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 0,20 Q 25,10 50,20 T 100,20" stroke="white" strokeWidth="3" fill="none" opacity="0.3"/>
-                <path d="M 0,25 Q 25,35 50,25 T 100,25" stroke="white" strokeWidth="3" fill="none" opacity="0.3"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#tireTrack)"/>
-          </svg>
-        </div>
-        
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
-          <div className="text-center">
-            <div className="inline-block mb-4 px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider">
-              Premium Chinese Vehicles
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-              <span className="block">{t('home.hero.title')}</span>
+      {/* Hero Section - CarMax Style */}
+      <section className="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 text-white overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight">
+              WANNA EXPORT?
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-blue-50 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-10 font-medium leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
             <Link
               href={`/${locale}/vehicles`}
-              className="inline-flex items-center px-10 py-4 bg-white text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text rounded-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+              className="inline-block px-10 py-4 bg-yellow-400 text-gray-900 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors duration-200 shadow-lg"
             >
               {t('home.hero.cta')}
-              <ArrowRight className="ml-2 text-blue-600 group-hover:translate-x-2 transition-transform" size={24} />
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
-      {/* B2B Services Section */}
-      <section className="py-20 bg-white">
+      {/* Search Section */}
+      <section className="bg-white py-12 border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-sm font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
-              Professional Services
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder={t('home.search.placeholder')}
+                className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+              />
+              <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-600">
+                <Search size={24} />
+              </button>
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          </div>
+        </div>
+      </section>
+
+      {/* B2B Services Section - Simplified */}
+      <section className="py-16 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('home.b2b.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -128,41 +106,37 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { key: 'wholesale', icon: '📦', gradient: 'from-blue-500 to-blue-600' },
-              { key: 'customization', icon: '🔧', gradient: 'from-purple-500 to-purple-600' },
-              { key: 'logistics', icon: '🚚', gradient: 'from-pink-500 to-pink-600' },
-              { key: 'support', icon: '💼', gradient: 'from-indigo-500 to-indigo-600' },
-            ].map((service, index) => (
+              { key: 'wholesale', icon: '📦', color: 'bg-blue-100 text-blue-600' },
+              { key: 'customization', icon: '🔧', color: 'bg-purple-100 text-purple-600' },
+              { key: 'logistics', icon: '🚚', color: 'bg-green-100 text-green-600' },
+              { key: 'support', icon: '💼', color: 'bg-orange-100 text-orange-600' },
+            ].map((service) => (
               <div
                 key={service.key}
-                className="group relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-purple-300 hover:-translate-y-3"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200"
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg text-3xl`}>
+                <div className={`inline-flex items-center justify-center w-14 h-14 ${service.color} rounded-lg mb-4 text-2xl`}>
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all">
+                <h3 className="text-xl font-bold mb-2 text-gray-900">
                   {t(`home.b2b.${service.key}.title`)}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600">
                   {t(`home.b2b.${service.key}.description`)}
                 </p>
-                <div className="mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 rounded-full" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Popular Brands Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      {/* Popular Brands Section - Simplified */}
+      <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-sm font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
-              Trusted Brands
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('home.brands.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -174,46 +148,26 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 text-center border border-gray-100 hover:border-purple-200 hover:-translate-y-3 cursor-pointer overflow-hidden"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center border border-gray-200 cursor-pointer"
               >
-                {/* Speed effect on hover */}
-                <div className="absolute inset-0 bg-speed-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                
-                {/* Tire icon decoration */}
-                <div className="absolute -right-6 -top-6 w-20 h-20 opacity-5 group-hover:opacity-10 group-hover:animate-tireRotate transition-all duration-500">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="text-blue-600">
-                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
+                <div className="flex justify-center mb-3 text-gray-700">
+                  <BrandIcon brandName={brand.name} className="w-16 h-16" />
                 </div>
-                
-                <div className="relative z-10">
-                  <div className="flex justify-center mb-4 text-gray-700 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
-                    <BrandIcon brandName={brand.name} className="w-20 h-20 transform group-hover:scale-125 group-hover:rotate-3 transition-all duration-500" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">{brand.name}</h3>
-                  <p className="text-sm text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold">
-                    {brand.models.length} models
-                  </p>
-                  
-                  {/* Engine pulse effect */}
-                  <div className="mt-3 h-1 w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 mx-auto rounded-full" />
-                </div>
+                <h3 className="text-base font-bold text-gray-900 mb-1">{brand.name}</h3>
+                <p className="text-sm text-gray-500">
+                  {brand.models.length} models
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Vehicles Section */}
-      <section className="py-20 bg-white">
+      {/* Featured Vehicles Section - Simplified */}
+      <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-sm font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
-              Premium Selection
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('home.featured.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -221,64 +175,37 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
-                className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-purple-200 hover:-translate-y-3 animate-enginePulse"
+                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden border border-gray-200"
               >
-                {/* Racing stripe decoration */}
-                <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-gradient-to-b from-blue-600 via-purple-600 to-pink-500 transition-all duration-500 z-10" />
-                <div className="absolute top-0 right-0 w-1 h-0 group-hover:h-full bg-gradient-to-b from-pink-500 via-purple-600 to-blue-600 transition-all duration-500 z-10" />
-                
-                <div className="relative h-52 overflow-hidden">
-                  {/* Speed lines overlay */}
-                  <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {[...Array(3)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute h-0.5 bg-white/50 animate-speedLines"
-                        style={{
-                          top: `${30 + i * 20}%`,
-                          width: '100px',
-                          animationDelay: `${i * 0.2}s`,
-                        }}
-                      />
-                    ))}
-                  </div>
-                  
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={vehicle.images[0]}
-                    alt={`${vehicle.brand} ${vehicle.model} ${vehicle.year} - Used car for sale, ${vehicle.mileage.toLocaleString()} km, ${vehicle.transmission}, ${vehicle.fuelType}`}
+                    alt={`${vehicle.brand} ${vehicle.model}`}
                     fill
-                    className="object-cover group-hover:scale-125 transition-transform duration-700"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all">
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {vehicle.brand} {vehicle.model}
                   </h3>
-                  <div className="space-y-2 text-sm text-gray-600 mb-4">
-                    <p className="flex items-center justify-between">
-                      <span className="font-medium">{t('home.featured.year')}:</span>
-                      <span className="font-semibold text-gray-900">{vehicle.year}</span>
-                    </p>
-                    <p className="flex items-center justify-between">
-                      <span className="font-medium">{t('home.featured.mileage')}:</span>
-                      <span className="font-semibold text-gray-900">{vehicle.mileage.toLocaleString()} {t('common.km')}</span>
-                    </p>
+                  <div className="space-y-1 text-sm text-gray-600 mb-4">
+                    <p>{vehicle.year} • {vehicle.mileage.toLocaleString()} {t('common.km')}</p>
                   </div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-2xl font-bold text-gray-900">
                       ${vehicle.price.toLocaleString()}
                     </span>
                   </div>
                   <Link
                     href={`/${locale}/vehicles/${vehicle.id}`}
-                    className="block w-full text-center px-5 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold"
+                    className="block w-full text-center px-4 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold"
                   >
                     {t('home.featured.viewDetails')}
                   </Link>
