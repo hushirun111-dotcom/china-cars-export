@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Chinese Used Cars for Middle East",
+      "subtitle": "High-quality vehicles at competitive prices. Export directly from China to Middle East.",
+      "cta": "Browse Vehicles"
+    },
+    "brands": {
+      "title": "Popular Brands",
+      "subtitle": "We specialize in reliable brands trusted across the Middle East"
+    },
+    "featured": {
+      "title": "Featured Vehicles",
+      "subtitle": "Handpicked selection for Middle East market",
+      "year": "Year",
+      "mileage": "Mileage",
+      "price": "Price",
+      "viewDetails": "View Details",
+      "contactUs": "Contact Us"
+    }
+  },
+  "vehicles": {
+    "title": "Available Vehicles",
+    "filters": {
+      "brand": "Brand",
+      "priceRange": "Price Range",
+      "year": "Year",
+      "type": "Vehicle Type",
+      "allBrands": "All Brands",
+      "allYears": "All Years",
+      "suv": "SUV",
+      "sedan": "Sedan",
+      "pickup": "Pickup",
+      "reset": "Reset Filters"
+    },
+    "noResults": "No vehicles found matching your criteria"
+  },
+  "vehicleDetail": {
+    "specifications": "Specifications",
+    "brand": "Brand",
+    "model": "Model",
+    "year": "Year",
+    "mileage": "Mileage",
+    "transmission": "Transmission",
+    "fuelType": "Fuel Type",
+    "color": "Color",
+    "price": "Price",
+    "description": "Description",
+    "contact": {
+      "title": "Interested in this vehicle?",
+      "subtitle": "Contact us via WhatsApp or Email",
+      "whatsapp": "WhatsApp",
+      "email": "Send Email"
+    }
+  },
+  "about": {
+    "title": "About China Cars Export",
+    "subtitle": "Your Trusted Partner in Chinese Used Car Export",
+    "intro": "We are a leading exporter of high-quality Chinese used cars to the Middle East. With years of experience in the automotive export business, we understand the unique needs of Middle Eastern customers.",
+    "why": {
+      "title": "Why Choose Us",
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "All vehicles undergo thorough inspection before export"
+      },
+      "price": {
+        "title": "Competitive Pricing",
+        "description": "Direct from source, best prices in the market"
+      },
+      "support": {
+        "title": "Full Support",
+        "description": "From selection to delivery, we handle everything"
+      },
+      "experience": {
+        "title": "Market Expertise",
+        "description": "Deep understanding of Middle East vehicle preferences"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! We will contact you soon.",
+      "error": "Please fill in all fields"
+    }
+  },
+  "footer": {
+    "description": "Careal - Your trusted partner for premium Chinese used cars export to Middle East. Quality vehicles at competitive prices.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved."
+  },
+  "common": {
+    "km": "km",
+    "usd": "USD",
+    "loading": "Loading...",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "gasoline": "Gasoline",
+    "diesel": "Diesel"
+  }
+}
