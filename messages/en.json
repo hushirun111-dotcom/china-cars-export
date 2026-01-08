@@ -7,17 +7,37 @@
   },
   "home": {
     "hero": {
-      "title": "Premium Chinese Used Cars for Middle East",
-      "subtitle": "High-quality vehicles at competitive prices. Export directly from China to Middle East.",
-      "cta": "Browse Vehicles"
+      "title": "Global B2B Chinese Automotive Export Solutions",
+      "subtitle": "Professional vehicle export services for wholesalers, dealers, and distributors worldwide. Complete supply chain from China to your market.",
+      "cta": "Explore Inventory"
+    },
+    "b2b": {
+      "title": "B2B Services",
+      "subtitle": "Comprehensive solutions for automotive business partners worldwide",
+      "wholesale": {
+        "title": "Bulk Wholesale",
+        "description": "Volume discounts for large orders. Flexible MOQ for distributors."
+      },
+      "customization": {
+        "title": "Custom Solutions",
+        "description": "KD kits, modifications, and tailored specifications for your market."
+      },
+      "logistics": {
+        "title": "Global Logistics",
+        "description": "13 overseas warehouses, door-to-door delivery to 40+ countries."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "description": "24/7 B2B customer service, multilingual team, technical assistance."
+      }
     },
     "brands": {
-      "title": "Popular Brands",
-      "subtitle": "We specialize in reliable brands trusted across the Middle East"
+      "title": "Premium Automotive Brands",
+      "subtitle": "Partnering with leading Chinese automotive manufacturers for global distribution"
     },
     "featured": {
-      "title": "Featured Vehicles",
-      "subtitle": "Handpicked selection for Middle East market",
+      "title": "Current Inventory",
+      "subtitle": "Bulk orders available for B2B partners and international distributors",
       "year": "Year",
       "mileage": "Mileage",
       "price": "Price",
@@ -61,7 +81,7 @@
   },
   "about": {
     "title": "About China Cars Export",
-    "subtitle": "Your Trusted Partner in Chinese Used Car Export",
+    "subtitle": "Your Global B2B Partner in Chinese Automotive Export",
     "company": {
       "title": "Company Introduction",
       "intro": "We are a Chinese automotive enterprise with 20 years of development history, possessing rich export experience in both passenger and commercial vehicles. Our export portfolio covers complete vehicle export (including used car export), KD (Knock Down) kits, and customized modifications.",

@@ -16,10 +16,10 @@ export async function generateMetadata({
   return {
     title: isArabic 
       ? 'الصفحة الرئيسية - Careal'
-      : 'Home - Premium Chinese Used Cars Export',
+      : 'Home - B2B Chinese Automotive Export Solutions',
     description: isArabic
-      ? 'اكتشف مجموعتنا من السيارات الصينية المستعملة عالية الجودة. BYD، Geely، Chery، Great Wall. شحن موثوق إلى جميع أنحاء الشرق الأوسط.'
-      : 'Discover our premium selection of Chinese used cars. BYD, Geely, Chery, Great Wall, and more. Reliable shipping to Middle East countries.',
+      ? 'حلول تصدير السيارات الصينية الاحترافية للشركات. خدمات الجملة، التخصيص، والخدمات اللوجستية العالمية. BYD، Geely، Chery، Great Wall.'
+      : 'Professional B2B Chinese automotive export solutions for global distributors and dealers. Wholesale, customization, and logistics services. BYD, Geely, Chery, Great Wall.',
   };
 }
 
@@ -32,15 +32,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Careal',
-    description: 'Premium Chinese used cars export to Middle East',
+    description: 'B2B Chinese automotive export solutions for global distributors',
     url: 'https://careal.com',
     logo: 'https://careal.com/logo.png',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+86-138-0000-0000',
-      contactType: 'Customer Service',
-      areaServed: ['AE', 'SA', 'QA', 'KW', 'OM', 'BH'],
-      availableLanguage: ['English', 'Arabic']
+      contactType: 'Business Sales',
+      areaServed: 'Worldwide',
+      availableLanguage: ['English', 'Arabic', 'Chinese', 'Russian', 'Spanish']
     },
     sameAs: [
       'https://facebook.com/careal',
@@ -111,6 +111,48 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* B2B Services Section */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-sm font-semibold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
+              Professional Services
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              {t('home.b2b.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('home.b2b.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { key: 'wholesale', icon: '📦', gradient: 'from-blue-500 to-blue-600' },
+              { key: 'customization', icon: '🔧', gradient: 'from-purple-500 to-purple-600' },
+              { key: 'logistics', icon: '🚚', gradient: 'from-pink-500 to-pink-600' },
+              { key: 'support', icon: '💼', gradient: 'from-indigo-500 to-indigo-600' },
+            ].map((service, index) => (
+              <div
+                key={service.key}
+                className="group relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-purple-300 hover:-translate-y-3"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg text-3xl`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all">
+                  {t(`home.b2b.${service.key}.title`)}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t(`home.b2b.${service.key}.description`)}
+                </p>
+                <div className="mt-6 h-1 w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 rounded-full" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Popular Brands Section */}
