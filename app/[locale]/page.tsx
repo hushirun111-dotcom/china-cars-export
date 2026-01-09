@@ -15,11 +15,11 @@ export async function generateMetadata({
   
   return {
     title: isArabic 
-      ? 'الصفحة الرئيسية - Careal'
-      : 'Home - B2B Chinese Automotive Export Solutions',
+      ? 'شراء سيارات مستعملة من الصين - Careal'
+      : 'Buy Used Cars from China | Quality Inspected | Best Prices - Careal',
     description: isArabic
-      ? 'حلول تصدير السيارات الصينية الاحترافية للشركات. خدمات الجملة، التخصيص، والخدمات اللوجستية العالمية. BYD، Geely، Chery، Great Wall.'
-      : 'Professional B2B Chinese automotive export solutions for global distributors and dealers. Wholesale, customization, and logistics services. BYD, Geely, Chery, Great Wall.',
+      ? 'شراء سيارات مستعملة عالية الجودة من الصين. تقارير فحص معتمدة، أفضل الأسعار، توصيل مرن. BYD، Geely، Chery، Great Wall.'
+      : 'Import quality used cars from China. Certified inspection reports, wholesale prices, flexible worldwide delivery. Massive inventory of BYD, Geely, Chery, Great Wall and more.',
   };
 }
 
@@ -30,15 +30,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   // Structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'AutoDealer',
     name: 'Careal',
-    description: 'B2B Chinese automotive export solutions for global distributors',
+    description: 'Import quality used cars from China with certified inspection and flexible delivery',
     url: 'https://careal.com',
     logo: 'https://careal.com/logo.png',
+    priceRange: '$$$',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+86-138-0000-0000',
-      contactType: 'Business Sales',
+      contactType: 'Customer Service',
       areaServed: 'Worldwide',
       availableLanguage: ['English', 'Arabic', 'Chinese', 'Russian', 'Spanish']
     },
@@ -61,7 +62,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight">
-              WANNA EXPORT?
+              {t('home.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-10 font-medium leading-relaxed">
               {t('home.hero.subtitle')}
@@ -94,37 +95,37 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
-      {/* B2B Services Section - Simplified */}
+      {/* Why Choose Us - 4 Core Advantages */}
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('home.b2b.title')}
+              {t('home.advantages.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('home.b2b.subtitle')}
+              {t('home.advantages.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { key: 'wholesale', icon: '📦', color: 'bg-blue-100 text-blue-600' },
-              { key: 'customization', icon: '🔧', color: 'bg-purple-100 text-purple-600' },
-              { key: 'logistics', icon: '🚚', color: 'bg-green-100 text-green-600' },
-              { key: 'support', icon: '💼', color: 'bg-orange-100 text-orange-600' },
-            ].map((service) => (
+              { key: 'inventory', icon: '🚗', color: 'bg-blue-100 text-blue-600' },
+              { key: 'inspection', icon: '✅', color: 'bg-green-100 text-green-600' },
+              { key: 'pricing', icon: '💰', color: 'bg-yellow-100 text-yellow-600' },
+              { key: 'delivery', icon: '🚚', color: 'bg-purple-100 text-purple-600' },
+            ].map((advantage) => (
               <div
-                key={service.key}
+                key={advantage.key}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200"
               >
-                <div className={`inline-flex items-center justify-center w-14 h-14 ${service.color} rounded-lg mb-4 text-2xl`}>
-                  {service.icon}
+                <div className={`inline-flex items-center justify-center w-14 h-14 ${advantage.color} rounded-lg mb-4 text-2xl`}>
+                  {advantage.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">
-                  {t(`home.b2b.${service.key}.title`)}
+                  {t(`home.advantages.${advantage.key}.title`)}
                 </h3>
                 <p className="text-gray-600">
-                  {t(`home.b2b.${service.key}.description`)}
+                  {t(`home.advantages.${advantage.key}.description`)}
                 </p>
               </div>
             ))}
@@ -232,7 +233,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             {t('home.featured.contactUs')}
           </h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto">
-            Contact us via WhatsApp or Email for inquiries
+            Get your dream car from China today. Fast response, transparent pricing, reliable service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

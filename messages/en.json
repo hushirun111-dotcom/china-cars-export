@@ -7,45 +7,45 @@
   },
   "home": {
     "hero": {
-      "title": "Global B2B Chinese Automotive Export Solutions",
-      "subtitle": "A professional vehicle export experience designed for your business",
-      "cta": "Search Inventory"
+      "title": "Find Your Perfect Used Car from China",
+      "subtitle": "Quality inspected vehicles at unbeatable prices, delivered to your door",
+      "cta": "Browse Inventory"
     },
     "search": {
-      "placeholder": "What kind of vehicles are you looking for?"
+      "placeholder": "Search by brand, model, or type..."
     },
-    "b2b": {
-      "title": "B2B Services",
-      "subtitle": "Comprehensive solutions for automotive business partners worldwide",
-      "wholesale": {
-        "title": "Bulk Wholesale",
-        "description": "Volume discounts for large orders. Flexible MOQ for distributors."
+    "advantages": {
+      "title": "Why Choose Us",
+      "subtitle": "Your trusted partner for importing quality used cars from China",
+      "inventory": {
+        "title": "Any Car You Want",
+        "description": "Massive inventory of used cars. We'll find your perfect match no matter what you're looking for."
       },
-      "customization": {
-        "title": "Custom Solutions",
-        "description": "KD kits, modifications, and tailored specifications for your market."
+      "inspection": {
+        "title": "Certified Quality",
+        "description": "Every vehicle comes with professional third-party inspection reports. Know exactly what you're buying."
       },
-      "logistics": {
-        "title": "Global Logistics",
-        "description": "13 overseas warehouses, door-to-door delivery to 40+ countries."
+      "pricing": {
+        "title": "Best Prices Guaranteed",
+        "description": "Competitive wholesale pricing direct from China. Save thousands without compromising on quality."
       },
-      "support": {
-        "title": "Dedicated Support",
-        "description": "24/7 B2B customer service, multilingual team, technical assistance."
+      "delivery": {
+        "title": "Flexible Delivery",
+        "description": "Door-to-door shipping worldwide or pick up at our local warehouse. You choose what works best."
       }
     },
     "brands": {
       "title": "Premium Automotive Brands",
-      "subtitle": "Partnering with leading Chinese automotive manufacturers for global distribution"
+      "subtitle": "Wide selection of quality used cars from China's leading manufacturers"
     },
     "featured": {
-      "title": "Current Inventory",
-      "subtitle": "Bulk orders available for B2B partners and international distributors",
+      "title": "Featured Vehicles",
+      "subtitle": "Handpicked quality used cars ready for immediate export",
       "year": "Year",
       "mileage": "Mileage",
       "price": "Price",
       "viewDetails": "View Details",
-      "contactUs": "Contact Us"
+      "contactUs": "Ready to Buy?"
     }
   },
   "vehicles": {
