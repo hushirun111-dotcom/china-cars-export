@@ -3,8 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFeaturedVehicles, brands } from '@/lib/data';
-import { Search } from 'lucide-react';
-import BrandIcon from '@/components/BrandIcon';
 
 export async function generateMetadata({ 
   params: { locale } 
@@ -83,19 +81,114 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
-      {/* Search Section */}
-      <section className="bg-white py-12 border-b border-gray-200">
+      {/* Quick Inquiry Form */}
+      <section className="bg-white py-16 border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder={t('home.search.placeholder')}
-                className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-              />
-              <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-600">
-                <Search size={24} />
-              </button>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                Get Your Free Quote
+              </h2>
+              <p className="text-lg text-gray-600">
+                Tell us what you're looking for and we'll find your perfect car
+              </p>
+            </div>
+            
+            <form className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-blue-100">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Name */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="John Smith"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="john@example.com"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number (WhatsApp)
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="+1 234 567 8900"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                  />
+                </div>
+
+                {/* Country */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Destination Country *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="USA, UAE, Mexico..."
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                  />
+                </div>
+              </div>
+
+              {/* Vehicle Requirements */}
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  What car are you looking for? *
+                </label>
+                <textarea
+                  required
+                  rows={4}
+                  placeholder="Example: I'm looking for a 2022 BYD Tang SUV with low mileage, budget around $15,000-$20,000..."
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-gray-600">
+                  ⚡ Fast response within 24 hours
+                </p>
+                <button
+                  type="submit"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Get Free Quote 🚗
+                </button>
+              </div>
+            </form>
+
+            {/* Trust Badges */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <span className="text-green-600 text-xl">✓</span>
+                <span>No obligations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-600 text-xl">✓</span>
+                <span>100% Free quote</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-green-600 text-xl">✓</span>
+                <span>Secure & confidential</span>
+              </div>
             </div>
           </div>
         </div>
@@ -272,20 +365,45 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {brands.map((brand) => (
-              <div
-                key={brand.name}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center border border-gray-200 cursor-pointer"
-              >
-                <div className="flex justify-center mb-3 text-gray-700">
-                  <BrandIcon brandName={brand.name} className="w-16 h-16" />
+            {brands.map((brand) => {
+              // Map brand names to logo URLs
+              const logoMap: Record<string, string> = {
+                'Toyota': 'https://www.carlogos.org/car-logos/toyota-logo.png',
+                'Nissan': 'https://www.carlogos.org/car-logos/nissan-logo.png',
+                'Mitsubishi': 'https://www.carlogos.org/car-logos/mitsubishi-logo.png',
+                'Ford': 'https://www.carlogos.org/car-logos/ford-logo.png',
+                'Chevrolet': 'https://www.carlogos.org/car-logos/chevrolet-logo.png'
+              };
+              
+              return (
+                <div
+                  key={brand.name}
+                  className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-200 cursor-pointer group"
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md p-3">
+                      {logoMap[brand.name] ? (
+                        <Image
+                          src={logoMap[brand.name]}
+                          alt={`${brand.name} logo`}
+                          width={96}
+                          height={96}
+                          className="object-contain"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                          <span className="text-3xl font-bold text-white">{brand.name.charAt(0)}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{brand.name}</h3>
+                  <p className="text-sm text-gray-500">
+                    {brand.models.length} models
+                  </p>
                 </div>
-                <h3 className="text-base font-bold text-gray-900 mb-1">{brand.name}</h3>
-                <p className="text-sm text-gray-500">
-                  {brand.models.length} models
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
