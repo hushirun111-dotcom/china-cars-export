@@ -110,38 +110,38 @@
     }
   },
   "about": {
-    "title": "About China Cars Export",
-    "subtitle": "Your Global B2B Partner in Chinese Automotive Export",
+    "title": "About Careal",
+    "subtitle": "Your Trusted Partner for Chinese Used Cars Worldwide",
     "company": {
       "title": "Company Introduction",
-      "intro": "We are a Chinese automotive enterprise with 20 years of development history, possessing rich export experience in both passenger and commercial vehicles. Our export portfolio covers complete vehicle export (including used car export), KD (Knock Down) kits, and customized modifications.",
-      "achievement": "To date, our vehicles have been sold to over 40 countries, serving more than 20,000 users. The company has a complete R&D system, advanced production processes, and strict quality control systems, enabling us to meet diverse requirements across different regions and scenarios."
+      "intro": "Careal specializes in exporting certified pre-owned vehicles from China to individual customers worldwide. We focus on Chinese new energy vehicles and popular brands like BYD, Chery, Geely, and Great Wall, offering affordable, quality cars with full transparency.",
+      "achievement": "Since our establishment, we've helped over 5,000 families find their perfect cars, with vehicles delivered to 40+ countries. Our mission is simple: make buying a quality used car from China safe, affordable, and hassle-free."
     },
     "culture": {
       "title": "Our Culture & Vision",
       "vision": {
-        "title": "Corporate Vision",
-        "description": "Through modification and diversified product services, we provide high-quality automotive export solutions for global customers."
+        "title": "Our Vision",
+        "description": "To become the world's most trusted platform for buying certified Chinese used cars, especially new energy vehicles."
       },
       "values": {
-        "title": "Corporate Values",
-        "description": "Innovation and Change, Customer-oriented, Professional Excellence, Win-win Cooperation"
+        "title": "Our Values",
+        "description": "Transparency First, Customer Success, Quality Over Quantity, Innovation in Service"
       },
       "mission": {
-        "title": "Corporate Mission",
-        "description": "To become a globally recognized leader in diversified automotive product exports, shaping industry standards through innovation and service."
+        "title": "Our Mission",
+        "description": "Help families worldwide access affordable, high-quality Chinese vehicles through transparent inspections and reliable delivery."
       }
     },
     "stats": {
-      "title": "Company Achievements",
-      "years": "Years of Experience",
-      "countries": "Countries Served",
-      "customers": "Users Served",
-      "warehouses": "Overseas Warehouses"
+      "title": "Our Achievements",
+      "years": "Years of Service",
+      "countries": "Countries Delivered",
+      "customers": "Happy Families",
+      "warehouses": "Global Warehouses"
     },
     "warehouses": {
       "title": "Global Warehouse Network",
-      "subtitle": "Strategically located warehouses across 13 countries to ensure fast delivery and local support",
+      "subtitle": "Local warehouses for faster delivery and easy inspection before final purchase",
       "list": {
         "russia": "Russia Warehouse",
         "belarus": "Belarus Warehouse",
@@ -160,25 +160,25 @@
     },
     "commitment": {
       "title": "Our Commitment",
-      "description": "We are committed to providing customers with comprehensive automotive export solutions through advanced technology, strict quality control, and excellent service, ensuring that every vehicle meets the highest standards."
+      "description": "Every vehicle comes with a detailed third-party inspection report. We handle all logistics, customs, and paperwork. Your satisfaction is guaranteed through transparent pricing and honest communication."
     },
     "why": {
       "title": "Why Choose Us",
       "quality": {
         "title": "Quality Assurance",
-        "description": "All vehicles undergo thorough inspection before export"
+        "description": "Professional third-party inspection reports for every vehicle"
       },
       "price": {
-        "title": "Competitive Pricing",
-        "description": "Direct from source, best prices in the market"
+        "title": "Best Prices",
+        "description": "Direct from China, no middlemen, wholesale pricing"
       },
       "support": {
         "title": "Full Support",
-        "description": "From selection to delivery, we handle everything"
+        "description": "From inquiry to delivery, we handle everything for you"
       },
       "experience": {
-        "title": "Market Expertise",
-        "description": "Deep understanding of Middle East vehicle preferences"
+        "title": "EV Expertise",
+        "description": "Specialists in Chinese new energy and electric vehicles"
       }
     }
   },
