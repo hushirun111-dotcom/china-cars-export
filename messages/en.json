@@ -14,8 +14,13 @@
     "search": {
       "placeholder": "Search by brand, model, or type..."
     },
+    "familyStory": {
+      "title": "Start Your Family's Journey",
+      "subtitle": "Thousands of families worldwide have found their perfect car through us",
+      "description": "Imagine your family's excitement when your dream car arrives. From the first family road trip to everyday adventures, we help make those precious moments possible."
+    },
     "advantages": {
-      "title": "Why Choose Us",
+      "title": "Why Families Trust Us",
       "subtitle": "Your trusted partner for importing quality used cars from China",
       "inventory": {
         "title": "Any Car You Want",
@@ -32,6 +37,28 @@
       "delivery": {
         "title": "Flexible Delivery",
         "description": "Door-to-door shipping worldwide or pick up at our local warehouse. You choose what works best."
+      }
+    },
+    "testimonials": {
+      "title": "Happy Customers, Happy Families",
+      "subtitle": "Real stories from families who found their dream cars",
+      "story1": {
+        "name": "The Johnson Family",
+        "location": "California, USA",
+        "car": "BYD Tang - 2022",
+        "quote": "Our kids absolutely love the spacious interior! The whole process was smooth and transparent. We saved over $8,000 compared to local dealers."
+      },
+      "story2": {
+        "name": "Ahmed & Family",
+        "location": "Dubai, UAE",
+        "car": "Geely Coolray - 2023",
+        "quote": "The inspection report gave us complete confidence. When the car arrived, it was even better than expected. My wife was so happy!"
+      },
+      "story3": {
+        "name": "The Martinez Family",
+        "location": "Mexico City, Mexico",
+        "car": "Chery Tiggo 8 - 2022",
+        "quote": "Perfect family SUV! The delivery to our door was so convenient. Our Sunday drives have never been more enjoyable."
       }
     },
     "brands": {
