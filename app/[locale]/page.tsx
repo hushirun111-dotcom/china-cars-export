@@ -365,45 +365,22 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {brands.map((brand) => {
-              // Map brand names to logo URLs
-              const logoMap: Record<string, string> = {
-                'Toyota': 'https://www.carlogos.org/car-logos/toyota-logo.png',
-                'Nissan': 'https://www.carlogos.org/car-logos/nissan-logo.png',
-                'Mitsubishi': 'https://www.carlogos.org/car-logos/mitsubishi-logo.png',
-                'Ford': 'https://www.carlogos.org/car-logos/ford-logo.png',
-                'Chevrolet': 'https://www.carlogos.org/car-logos/chevrolet-logo.png'
-              };
-              
-              return (
-                <div
-                  key={brand.name}
-                  className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-200 cursor-pointer group"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md p-3">
-                      {logoMap[brand.name] ? (
-                        <Image
-                          src={logoMap[brand.name]}
-                          alt={`${brand.name} logo`}
-                          width={96}
-                          height={96}
-                          className="object-contain"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                          <span className="text-3xl font-bold text-white">{brand.name.charAt(0)}</span>
-                        </div>
-                      )}
-                    </div>
+            {brands.map((brand) => (
+              <div
+                key={brand.name}
+                className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 text-center border border-gray-200 cursor-pointer group"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg border-2 border-gray-100">
+                    <span className="text-4xl font-bold bg-gradient-to-br from-blue-600 to-blue-800 bg-clip-text text-transparent">{brand.name.charAt(0)}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{brand.name}</h3>
-                  <p className="text-sm text-gray-500">
-                    {brand.models.length} models
-                  </p>
                 </div>
-              );
-            })}
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{brand.name}</h3>
+                <p className="text-sm text-gray-500">
+                  {brand.models.length} models
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
